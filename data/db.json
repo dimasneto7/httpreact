@@ -17,23 +17,58 @@
     },
     {
       "name": "teste",
-      "price": "3",
+      "price": "1",
       "id": 4
     },
     {
-      "name": "Borracha",
-      "price": "50",
+      "name": "teste 2",
+      "price": "2",
       "id": 5
     },
     {
-      "name": "Lapis",
-      "price": "10",
+      "name": "Teste 3",
+      "price": "3",
       "id": 6
     },
     {
-      "name": "teste",
-      "price": "10",
+      "name": "Teste 3",
+      "price": "3",
       "id": 7
+    },
+    {
+      "name": "teste 4",
+      "price": "1",
+      "id": 8
+    },
+    {
+      "name": "teste 5",
+      "price": "5",
+      "id": 9
+    },
+    {
+      "name": "teste 5",
+      "price": "5",
+      "id": 10
+    },
+    {
+      "name": "teste 6",
+      "price": "6",
+      "id": 11
+    },
+    {
+      "name": "teste 7",
+      "price": "7",
+      "id": 12
+    },
+    {
+      "name": "teste 8",
+      "price": "8",
+      "id": 13
+    },
+    {
+      "name": "teste 9",
+      "price": "9",
+      "id": 14
     }
   ]
 }
