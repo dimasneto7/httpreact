@@ -69,6 +69,16 @@
       "name": "teste 9",
       "price": "9",
       "id": 14
+    },
+    {
+      "name": "teste 10",
+      "price": "",
+      "id": 15
+    },
+    {
+      "name": "teste 10",
+      "price": "",
+      "id": 16
     }
   ]
 }
