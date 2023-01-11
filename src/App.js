@@ -2,25 +2,29 @@ import "./App.css";
 
 import { useState, useEffect } from "react";
 
+import { useFetch } from "./hooks/useFetch";
+
 const url = "http://localhost:3000/products";
 
 function App() {
   const [products, setProducts] = useState([]);
 
+  const { data: items } = useFetch(url);
+
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");
 
-  useEffect(() => {
-    async function fetchData() {
-      const res = await fetch(url);
+  // useEffect(() => {
+  //   async function fetchData() {
+  //     const res = await fetch(url);
 
-      const data = await res.json();
+  //     const data = await res.json();
 
-      setProducts(data);
-    }
+  //     setProducts(data);
+  //   }
 
-    fetchData();
-  }, []);
+  //   fetchData();
+  // }, []);
 
   const handleSubimit = async (e) => {
     e.preventDefault();
@@ -37,17 +41,25 @@ function App() {
       },
       body: JSON.stringify(product),
     });
+
+    const addedProduct = await res.json();
+
+    setProducts((prevProducts) => [...prevProducts, addedProduct]);
+
+    setName("");
+    setPrice("");
   };
 
   return (
     <div className="App">
       <h1>Lista de Produtos</h1>
       <ul>
-        {products.map((product) => (
-          <li key={product.id}>
-            {product.name} - {product.price}
-          </li>
-        ))}
+        {items &&
+          items.map((product) => (
+            <li key={product.id}>
+              {product.name} - {product.price}
+            </li>
+          ))}
       </ul>
       <div className="add-product">
         <form onSubmit={handleSubimit}>
